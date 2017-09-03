@@ -9,7 +9,7 @@ import net.minecraft.util.text.TextFormatting;
 public class SkinWorker {
 	public static boolean enabled = false;
 public static void enable() {
-	Minecraft.getMinecraft().thePlayer.addChatMessage(new TextComponentString(TextFormatting.GREEN + "Second skin layer enabled."));
+	Minecraft.getMinecraft().player.sendMessage(new TextComponentString(TextFormatting.GREEN + "Second skin layer enabled."));
 	enabled = true;
 	Minecraft.getMinecraft().gameSettings.setModelPartEnabled(EnumPlayerModelParts.LEFT_SLEEVE, true);
 	Minecraft.getMinecraft().gameSettings.setModelPartEnabled(EnumPlayerModelParts.RIGHT_SLEEVE, true);
@@ -19,7 +19,7 @@ public static void enable() {
 	Minecraft.getMinecraft().gameSettings.setModelPartEnabled(EnumPlayerModelParts.HAT, true);
 }
 public static void disable() {
-	Minecraft.getMinecraft().thePlayer.addChatMessage(new TextComponentString(TextFormatting.GREEN + "Second skin layer disabled."));
+	Minecraft.getMinecraft().player.sendMessage(new TextComponentString(TextFormatting.GREEN + "Second skin layer disabled."));
 	enabled = false;
 	Minecraft.getMinecraft().gameSettings.setModelPartEnabled(EnumPlayerModelParts.LEFT_SLEEVE, false);
 	Minecraft.getMinecraft().gameSettings.setModelPartEnabled(EnumPlayerModelParts.RIGHT_SLEEVE, false);
